@@ -1,12 +1,13 @@
 import { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
+import Dashboard from './Pages/Admin/Dashboard/Dash/Dashboard'
 
 
 const Layout = lazy(() => import('./Pages/Admin/Auth/Layout'));
 const Login = lazy(() => import('./Pages/Admin/Auth/Login'));
 const Register = lazy(() => import('./Pages/Admin/Auth/Register'));
-const Dashboard = lazy(() => import('./pages/Admin/DashBoard/Dash/Dashboard'));
+// const Dashboard = lazy(() => import('./pages/Admin/Dashboard/Dash/Dashboard'));
 const AddList = lazy(() => import('./Pages/Admin/Dashboard/List/AddList'));
 const Listing = lazy(() => import('./Pages/Admin/Dashboard/List/Listing'));
 
@@ -27,7 +28,7 @@ function App() {
       <Route path='dashboard' element={
         <PrivateRoute>
           <Dashboard />
-        // </PrivateRoute>
+        </PrivateRoute>
       }>
         <Route path="addlist" element={<AddList />} />
         <Route path="editlist/:id" element={<AddList />} />
