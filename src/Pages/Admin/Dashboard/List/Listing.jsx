@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import DeleteModal from '../../../../common/DeleteMOdal';
+import DeleteModal from '../../../../common/DeleteModal'
 
 const Listing = () => {
 
